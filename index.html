@@ -71,5 +71,25 @@
             <td>1 day</td>
           </tr>
       </table>
+
+
+      <hr>
+
+      <h3>Code</h3>
+
+      <h4> stackoverflow code </h4>
+      <blockquote>Remove Width and Height Attributes From Inserted Images</blockquote>
+      <a href="https://stackoverflow.com/questions/11014165/remove-attributes-height-and-width-of-the-image-tag">stackoverflow</a>
+
+      <h4> csstricks code for wordpress </h4>
+
+<pre>    add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+    add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+    
+    function remove_width_attribute( $html ) {
+       $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+       return $html;
+    }</pre>
+  
 </body>
 </html>
